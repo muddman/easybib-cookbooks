@@ -1,7 +1,7 @@
 include_recipe "apt::ppa"
 
-easybib_launchpad node["redis"]["ppa"] do
-  action :discover
+apt_repository "chrislea-redis" do
+  uri "http://ppa.ezbib.com/trusty55"
 end
 
 package "redis-server"
